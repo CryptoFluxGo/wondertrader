@@ -5,7 +5,7 @@
 # 构建完成以后，要启动容器，可以使用命令： docker run -it yourimagename /bin/bash
 
 FROM wondertrader/wondertrader:latest
-MAINTAINER wondertrader@126.com
+LABEL email=fuyy2008@gmail.com
 
 # 添加预编译依赖库，并解压
 ADD mydeps_gcc8.4.0.7z /home
@@ -14,7 +14,7 @@ RUN cd /home && 7za x mydeps_gcc8.4.0.7z
 # 拉取wondertrader代码
 # 如果在宿主机上已经拉取了wondertrader代码，可以注释掉下一行指令，并在启动容器的时候使用-v参数将宿主机上的代码目录挂载到容器中
 # docker run -it yourimagename -v /home/wondertrader:/home/wondertrader /bin/bash
-RUN cd /home && git clone https://gitee.com/wondertrader/wondertrader.git
+#RUN cd /home && git clone https://gitee.com/wondertrader/wondertrader.git
 
 # 设置工作目录
 WORKDIR /home/wondertrader/
