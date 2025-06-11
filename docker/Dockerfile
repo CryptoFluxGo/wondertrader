@@ -7,6 +7,9 @@
 FROM wondertrader/wondertrader:latest
 LABEL email=fuyy2008@gmail.com
 
+# Install cpp debugger
+RUN apt-get update && apt-get install -y gdb
+
 # 添加预编译依赖库，并解压
 ADD mydeps_gcc8.4.0.7z /home
 RUN cd /home && 7za x mydeps_gcc8.4.0.7z

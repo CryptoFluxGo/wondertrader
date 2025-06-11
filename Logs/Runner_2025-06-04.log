@@ -1,0 +1,10 @@
+[2025.06.04 02:19:16 - error] Trading sessions configuration file ../common/sessions.json not exists
+[2025.06.04 02:19:16 - error] Commodities configuration file ../common/commodities.json not exists
+[2025.06.04 02:19:16 - error] Contracts configuration file ../common/contracts.json not exists
+[2025.06.04 02:19:16 - error] Configure  not exist
+[2025.06.04 02:22:59 - info ] Commodities configuration file dist/common/commodities.json loaded
+[2025.06.04 02:22:59 - info ] Contracts configuration file dist/common/contracts.json loaded, 5 exchanges
+[2025.06.04 02:22:59 - error] Configure  not exist
+[2025.06.04 03:07:36 - info ] Commodities configuration file dist/common/commodities.json loaded
+[2025.06.04 03:07:36 - info ] Contracts configuration file dist/common/contracts.json loaded, 5 exchanges
+[2025.06.04 03:07:36 - error] Configure  not exist

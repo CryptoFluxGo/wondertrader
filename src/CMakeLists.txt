@@ -76,6 +76,9 @@ ADD_SUBDIRECTORY(WtDtCore)
 ADD_SUBDIRECTORY(WtDtHelper)
 ADD_SUBDIRECTORY(WtDtPorter)
 ADD_SUBDIRECTORY(WtDtServo)
+#cryptos
+ADD_SUBDIRECTORY(ParserSolona)
+
 #quote date processor
 ADD_SUBDIRECTORY(QuoteFactory)
 
@@ -113,6 +116,9 @@ ADD_SUBDIRECTORY(WtUftRunner)
 
 ADD_SUBDIRECTORY(WtLatencyHFT)
 ADD_SUBDIRECTORY(WtLatencyUFT)
+
+# strategy factory
+ADD_SUBDIRECTORY(WtCtaStraFact)
 
 #test projects
 ADD_SUBDIRECTORY(TestBtPorter)

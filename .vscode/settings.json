@@ -1,0 +1,4 @@
+{
+    "cmake.generator": "Unix Makefiles",
+    "cmake.buildDirectory": "${workspaceFolder}/src/build_debug/build_x64/Debug/bin/TestParser"
+}
