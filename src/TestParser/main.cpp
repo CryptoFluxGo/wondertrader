@@ -141,15 +141,21 @@ std::string getBaseFolder()
 int main()
 {
 	WTSLogger::init("logcfg.yaml");
+	std::cout << getBaseFolder() << std::endl;
+	std::cout << "entering parser test..." << std::endl;
 
 	WTSVariant* root = WTSCfgLoader::load_from_file("config.yaml");
-	if (root == NULL)
-	{
+
+	std:cout << (root != NULL) << std::endl;
+
+	if (root == NULL) {
 		WTSLogger::log_raw(LL_ERROR, "Loading config.yaml failed");
+		std::cerr << "Error: config.yaml could not be loaded." << std::endl;
 		return 0;
 	}
 
-	WTSVariant* cfg = root->get("config");
+	//TODO: there is no config in config.yaml. should it be basefiles?
+	WTSVariant* cfg = root->get("basefiles"); //config
 	if (cfg->has("session"))
 		g_bdMgr.loadSessions(cfg->getCString("session"));
 
@@ -159,7 +165,9 @@ int main()
 	if (cfg->has("contract"))
 		g_bdMgr.loadContracts(cfg->getCString("contract"));
 
-	std::string module = cfg->getCString("parser");
+	std::string module = cfg->getCString("parsers");
+
+	//TODO: where is profile?
 	std::string profile = cfg->getCString("profile");
 	WTSVariant* params = root->get(profile.c_str());
 	if (params == NULL)
